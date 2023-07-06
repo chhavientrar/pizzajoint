@@ -9,7 +9,7 @@ const Home = () => {
     animate={{opacity:1}}
 
     >
-      <motion.h2 animate={{fontSize:35, color:'yellow',y:-10}}>
+      <motion.h2 animate={{fontSize:55, color:'yellow',y:-20}}>
         Welcome to Pizza Joint
       </motion.h2>
       <Link to="/base">

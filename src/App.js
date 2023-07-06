@@ -6,9 +6,11 @@ import Base from "./components/Base";
 import Toppings from "./components/Toppings";
 import Order from "./components/Order";
 import Cards from "./components/Cards";
+import Modal from "./components/Model";
 
 function App() {
   const [pizza, setPizza] = useState({ base: "", toppings: [] });
+  const [showmodel,setshowmodel] = useState(false)
 
   const addBase = (base) => {
     setPizza({ ...pizza, base });
@@ -27,7 +29,7 @@ function App() {
   return (
     <>
       <Header />
-
+<Modal showModal={showmodel} setShowModal={setshowmodel}/>
       <Switch>
         <Route path="/base">
           <Base addBase={addBase} pizza={pizza} />
@@ -36,7 +38,7 @@ function App() {
           <Toppings addTopping={addTopping} pizza={pizza} />
         </Route>
         <Route path="/order">
-          <Order pizza={pizza} />
+          <Order pizza={pizza} setShowModal={setshowmodel} />
         </Route>
         <Route path="/">
           <Home />
