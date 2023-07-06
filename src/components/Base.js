@@ -5,7 +5,12 @@ const Base = ({ addBase, pizza }) => {
   const bases = ['Classic', 'Thin & Crispy', 'Thick Crust'];
 
   return (
-    <div className="base container">
+    <motion.div className="base container"
+    initial={{x:'100vw'}}
+    animate={{x:0}}
+    transition={{type:'spring',delay:0.5}}
+   
+    >
 
       <h3>Step 1: Choose Your Base</h3>
       <ul>
@@ -26,12 +31,14 @@ const Base = ({ addBase, pizza }) => {
         transition={{type:'spring',stiffness:120}}
          className="next">
           <Link to="/toppings">
-            <button>Next</button>
+            <motion.button whileHover={{scale:1.3}}>
+              <img src='./Male Framer.gif' alt='next' height='30px' width='30px'/>
+              Next</motion.button>
           </Link>
         </motion.div>
       )}
 
-    </div>
+    </motion.div>
   )
 }
 
