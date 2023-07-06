@@ -104,3 +104,17 @@ li span.active::before{
 .order p{
   margin: 20px auto;
 }
+.card{
+  height: 300px;
+  width: 200px;
+  background-color: blueviolet;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  top: 280px;
+  position: absolute;
+}
+.cardimg{ 
+  position: relative;
+  top: 80px;
+}

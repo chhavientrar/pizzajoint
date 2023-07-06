@@ -5,8 +5,11 @@ const Home = () => {
   return (
     <motion.div className="home container"
     // animate={{marginTop:30}}
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+
     >
-      <motion.h2 animate={{fontSize:55, color:'yellow',y:-50}}>
+      <motion.h2 animate={{fontSize:35, color:'yellow',y:-10}}>
         Welcome to Pizza Joint
       </motion.h2>
       <Link to="/base">
